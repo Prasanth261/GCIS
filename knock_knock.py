@@ -1,7 +1,10 @@
 def joke():
-    input("Knock Knock: ")
-    x=input("Beets: ")
-    print("Beets me!")
+    x=input("Knock Knock: ")
+    print(x)
+    y=input("")
+    z=input(f"{y}: ")
+    print(z)
+    input()
 
 def main():
     joke()
