@@ -21,12 +21,10 @@ def draw_circle(color='Red',rad=10):
 def draw_smiley(color,radius):
     draw_circle('yellow',radius)
     draw_circle('LightCoral',radius/12)
-    # draw_eye(radius*0.35,radius*0.25,color,radius*0.25)
-    # draw_eye(-(radius*0.35),radius*0.25,color,radius*0.25)
-    draw_eye(radius/3,radius/3,color,radius/4)
-    draw_eye(-radius/3,radius/3,color,radius/4)
-
-    input("Enter to continue: ")
+    draw_eye(radius*0.35,radius*0.25,color,radius*0.25)
+    draw_eye(-(radius*0.35),radius*0.25,color,radius*0.25)
+    mouth(radius*0.35)
+    input(" ENTER")
 
 def draw_eye(x,y,color,radius):
     t.up()
@@ -35,16 +33,29 @@ def draw_eye(x,y,color,radius):
     draw_circle('white',radius)
     draw_circle(color,radius/2)
     draw_circle('black',radius/4)
+    t.goto(x-radius,y-radius)
 
 
 def tweak():
-    t.speed(5)
-    t.tracer(False)
-    t.hideturtle()
+    t.speed(0)
+    t.tracer(True)
+    # t.hideturtle()
+
+def mouth(radius):
+    t.down()
+    t.speed(1)
+    t.right(180)
+    t.forward(50)
+    t.right(180)
+    t.right(90)
+    t.circle(radius,180)
+    t.left(90)
+    t.forward(50)
+    
+
 
 def main():
     tweak()
-    draw_smiley('blue',100)
+    draw_smiley('blue',150)
 
 main()
-
