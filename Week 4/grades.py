@@ -1,5 +1,7 @@
 def assignGrade(x):
-    if x>=90:
+    if x>100 or x<0:
+        return "ERROR, Please run again!"
+    elif x>=90:
         return "A"
     elif x<90 and x>=80: #[80,90)
         return "B"
