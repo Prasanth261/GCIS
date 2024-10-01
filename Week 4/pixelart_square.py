@@ -50,12 +50,17 @@ def grid_color(no_rows=2,column_no=2):
         var=column_color(column_no)
         t.right(180)
         t.forward(var)
+        if i==no_rows-1:
+            t.right(90)
+            t.forward(var)
+            t.right(90)
+            break
         t.left(90)
         t.forward(30)
         t.left(90)
         i+=1
 
-def square(column,row_no,size):
+def square(column,row_no,size,grid_row):
     t.left(90)
     t.forward(row_no*30)
     t.right(90)
@@ -65,7 +70,7 @@ def square(column,row_no,size):
     t.penup()
     t.forward(column*30)
     t.left(90)
-    t.forward((row_no-2)*30)
+    t.forward(row_no*30)
     t.left(90)
     t.pendown()
 
@@ -77,7 +82,7 @@ def main():
     t.pendown()
     grid(6,6)
     grid_row=6
-    square(5-1,grid_row-5,2)
+    square(3-1,grid_row-3,2,6)
     t.done()
 
 if __name__=="__main__":
