@@ -1,3 +1,4 @@
+#2.2.7
 def variable_practice():
     age = int(input("Enter age: "))
     age_m= age*12
@@ -7,6 +8,7 @@ def variable_practice():
     # print("age:",age,"age in months:",age_m,"year:",year,"name of the pet:",name_pet,"pi 5 digits:",Pi_5_digits)
     print(f"Age in months: {age_m},Number of days in a year: {year},name of ur first pet: {name_pet},first 5 digits of pi: {Pi_5_digits}")
 
+#2.2.8
 def expressions_practice():
     Literal="Prasanth"
     Addition=2+2
@@ -20,7 +22,19 @@ def expressions_practice():
     print()
     print(f"Literal:{Literal}\nAddtion:{Addition}\nSubraction:{Subraction}\nExponent:{Exponent}\nFloor_Division:{Floor_Division}\nMod:{Mod}\nparenthesis:{parenthesis}\nMix:{Mix}\n")
 
+#2.2.9&10
+def prompt_and_print():
+    x=int(input("Enter a number: "))
+    y=int(input("Enter another number: "))
+    print(x,"+",y,"=",x+y)
+    print(x,"-",y,"=",x-y)
+    print(x,"*",y,"=",x*y)
+    print(x,"/",y,"=",x/y)
+
+#2.2.11 
 def main():
     variable_practice()
     expressions_practice()
+    prompt_and_print()
+
 main()
