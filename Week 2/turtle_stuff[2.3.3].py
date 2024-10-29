@@ -1,8 +1,9 @@
-import turtle
+import turtle as t
+
 angle=76
 
+#2.3.3
 def turtle_drive():
-    t = turtle.Turtle()
     t.forward(100)
     t.left(86)
     t.setheading(127)
@@ -12,41 +13,40 @@ def turtle_drive():
     t.circle(25)
     input("Please enter to continue")
 
+#2.3.5
 def turtle_state():
-    t = turtle.Turtle()
     print(t.isdown())
     print(t.heading())
     print(t.xcor())
     print(t.ycor())
-    
-def square():
-    t = turtle.Turtle()
-    angle=65
+
+#2.3.6-10   
+def square(angle,size=10):
+    t.pensize(4)
+    t.pencolor("red")
+    t.fillcolor("blue")
+    t.begin_fill()
     t.left(angle)
-    t.forward(50)
+    t.forward(size)
     t.right(90)
-    t.forward(50)
+    t.forward(size)
     t.right(90)
-    t.forward(50)
+    t.forward(size)
     t.right(90)
-    t.forward(50)
+    t.forward(size)
+    t.right(180)
+    t.end_fill()
     input("Enter to continue: ")
 
-def param_square(size=10):
-    t = turtle.Turtle()
-    for i in range(3):
-        t.forward(size)
-        t.right(90)
-    t.forward(size)
-    input("Enter to continue: ")
+
 
 def main():
-    turtle_state()
+    # turtle_state()
     # turtle_drive()
-    square()
-    # param_square(100)
-    # param_square(250)
-    # param_square(500)
+    t.bgcolor('pink')
+    square(140,100)
+    square(120,80)
+    square(100,50)
     turtle_state()
 
 main()
