@@ -1,10 +1,12 @@
 
-
+list1=[]
 def series(number):
-    if number==0:
-        return series(number)
-    else:
-        return number+series(number-1)
+ count=0
+    # if number==0:
+    #     return list1.append(0)
+    # else:
+    #     print
+    #     return number+series(number-1)
 
 
 print(series(4))
